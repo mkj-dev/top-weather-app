@@ -29,6 +29,11 @@ input[type="text"] {
     cursor: pointer;
 }
 
+#city-name {
+    text-align: center;
+    font-size: 1.5em;
+}
+
 #data {
     display: flex;
     justify-content: space-around;
