@@ -1,4 +1,5 @@
 import apiKey from "./key.js";
+import getAirPollution from "./get_air_pollution.js";
 
 // Form
 const city = document.getElementById('city');
@@ -15,6 +16,7 @@ cityNameHeading.setAttribute('id', 'city-name')
 
 getCityBtn.addEventListener('click', () => {
     getWeather(city.value);
+    getAirPollution(city.value);
 });
 
 async function getWeather(cityName) {
@@ -25,10 +27,10 @@ async function getWeather(cityName) {
         cityNameHeading.innerText = `City: ${weatherData.name}`;
         data.insertAdjacentElement('beforebegin', cityNameHeading);
         
-        temperatureData.innerHTML = `<p>Temperature: ${weatherData.main['temp']}</p>
-        <p>Feels like: ${weatherData.main['feels_like']}</p>
-        <p>Min. temperature: ${weatherData.main['temp_min']}</p> 
-        <p>Max. temperature: ${weatherData.main['temp_max']}</p>`;
+        temperatureData.innerHTML = `<p>Temperature: ${weatherData.main['temp']} &#8451;</p>
+        <p>Feels like: ${weatherData.main['feels_like']} &#8451;</p>
+        <p>Min. temperature: ${weatherData.main['temp_min']} &#8451;</p> 
+        <p>Max. temperature: ${weatherData.main['temp_max']} &#8451;</p>`;
 
         otherData.innerHTML = `<p>Humidity: ${weatherData.main['humidity']}%</p>
         <p>Cloudiness: ${weatherData.clouds['all']}%</p>
