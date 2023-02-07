@@ -13,6 +13,7 @@ header {
 
 /* MAIN ELEMENT */
 #main {
+    min-height: 100vh;
     max-width: 500px;
     margin: 3em auto;
     padding: 1em;
