@@ -36,7 +36,9 @@ async function getWeather(cityName) {
         <p>Cloudiness: ${weatherData.clouds['all']}%</p>
         <p>Wind speed: ${weatherData.wind['speed']} m/s</p>
         <p>Weather: ${weatherData.weather[0]['description']}</p>
-        <img src="http://openweathermap.org/img/wn/${weatherData.weather[0]['icon']}@2x.png" />`
+        <div class='weather-img'>
+            <img src="http://openweathermap.org/img/wn/${weatherData.weather[0]['icon']}@4x.png" />
+        </div>`
     } catch (err) {
         data.innerHTML = '<h3 style="color:red">Something went wrong, check console for details...</h3>';
         console.error(err);
