@@ -60,12 +60,18 @@ input[type="text"] {
 #data {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 #air-pollution-data h3 {
     text-align: center;
     font-size: 1.5rem;
+}
+
+.air-pollution-index {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: .5em;
 }
 
 /* FOOTER */
