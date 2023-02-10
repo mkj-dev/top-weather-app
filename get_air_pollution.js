@@ -19,8 +19,6 @@ async function getAirPollution(cityName) {
 
         // Set the color of the air pollution index depending on its number
         const airPollutionIndex = document.querySelector('.air-pollution-index');
-        airPollutionIndex.style.fontSize = '1.2rem';
-        airPollutionIndex.style.marginBottom = '.5em';
 
         switch(airPollution['list'][0]['main']['aqi']) {
             case 1:
