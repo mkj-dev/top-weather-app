@@ -22,10 +22,10 @@ async function getAirPollution(cityName) {
 
     switch (airPollution['list'][0]['main']['aqi']) {
       case 1:
-        airPollutionIndex.style.color = '#009933';
+        airPollutionIndex.style.color = '#35fb04';
         break;
       case 2:
-        airPollutionIndex.style.color = '#669900';
+        airPollutionIndex.style.color = '#428205';
         break;
       case 3:
         airPollutionIndex.style.color = ' #cccc00';
