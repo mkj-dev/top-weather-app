@@ -12,7 +12,10 @@ const otherData = document.getElementById('other-data');
 
 // City name
 const cityNameHeading = document.createElement('h3');
-cityNameHeading.setAttribute('id', 'city-name')
+cityNameHeading.setAttribute('id', 'city-name');
+
+// Weather image
+const weatherImg = document.getElementById('weather-img');
 
 getCityBtn.addEventListener('click', () => {
     getWeather(city.value);
@@ -35,10 +38,9 @@ async function getWeather(cityName) {
         otherData.innerHTML = `<p>Humidity: ${weatherData.main['humidity']}%</p>
         <p>Cloudiness: ${weatherData.clouds['all']}%</p>
         <p>Wind speed: ${weatherData.wind['speed']} m/s</p>
-        <p>Weather: ${weatherData.weather[0]['description']}</p>
-        <div class='weather-img'>
-            <img src="http://openweathermap.org/img/wn/${weatherData.weather[0]['icon']}@4x.png" />
-        </div>`
+        <p>Weather: ${weatherData.weather[0]['description']}</p>`
+
+        weatherImg.innerHTML = `<img src="http://openweathermap.org/img/wn/${weatherData.weather[0]['icon']}@4x.png" />`
     } catch (err) {
         data.innerHTML = '<h3 style="color:red">Something went wrong, check console for details...</h3>';
         console.error(err);
