@@ -8,12 +8,14 @@ html, body {
 body {
     margin: 0;
     font-family:'Roboto','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #e3e5ee;
+    background-color: #7286D3;
+    color: #FFF2F2;
+    letter-spacing: 1px;
 }
 
 /* HEADER */
 header {
-    background-color: lightblue;
+    background-color: #8EA7E9;
     padding: 20px;
     text-align: center;
 }
@@ -35,20 +37,24 @@ header {
 #main form label {
     display: block;
     font-size: 1.5rem;
-    margin-bottom: .5em;
+    margin-bottom: .5rem;
 }
 
 input[type="text"] {
     width: 100%;
-    padding: .5em 0;
-    margin: .5em 0;
+    padding: .5rem 0;
+    margin: .5rem 0;
     font-size: 1.2rem;
 }
 
 #get-city-btn {
     display: block;
-    padding: .5em .8em;
+    padding: .6rem 1rem;
     cursor: pointer;
+    background-color: #8EA7E9;
+    border: 1px solid #E5E0FF;
+    border-radius: .5rem;
+    color: #FFF2F2;
 }
 
 #city-name {
@@ -71,12 +77,17 @@ input[type="text"] {
 .air-pollution-index {
     text-align: center;
     font-size: 1.2rem;
-    margin-bottom: .5em;
+    margin-bottom: .5rem;
+}
+
+/* WEATHER IMAGE */
+#weather-img {
+    text-align: center;
 }
 
 /* FOOTER */
 footer {
-    background-color: lightblue;
+    background-color: #8EA7E9;
     padding: 20px;
     text-align: center;
 }
